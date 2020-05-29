@@ -1,14 +1,17 @@
 import * as React from 'react';
-import { SplitText, WordWrapperProp } from '../../dist';
+import { SplitText, LetterWrapperProp } from '../../dist';
 import { motion } from 'framer-motion';
 
-const WordWrapper: React.FC<WordWrapperProp> = ({ children, countIndex }) => {
+const LetterWrapper: React.FC<LetterWrapperProp> = ({
+  children,
+  countIndex,
+}) => {
   return (
     <motion.span
       transition={{
         ease: 'easeOut',
         duration: 1,
-        delay: 0.125 * countIndex,
+        delay: 0.025 * countIndex,
       }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -17,11 +20,11 @@ const WordWrapper: React.FC<WordWrapperProp> = ({ children, countIndex }) => {
     </motion.span>
   );
 };
-const MemoizedWordWrapper = React.memo(WordWrapper);
+const MemoizedLetterWrapper = React.memo(LetterWrapper);
 
 export const FadeIn: React.FC = () => {
   return (
-    <SplitText WordWrapper={MemoizedWordWrapper}>
+    <SplitText LetterWrapper={MemoizedLetterWrapper}>
       Hello wolrd from the FadeIn Component!
     </SplitText>
   );

@@ -16,12 +16,19 @@ export interface WordWrapperProp {
   wordIndex: number;
   countIndex: number;
 }
+export interface LetterWrapperProp {
+  lineIndex: number;
+  wordIndex: number;
+  letterIndex: number;
+  countIndex: number;
+}
 
 export interface SplitTextProps {
   className?: string;
   style?: CSSProperties;
   LineWrapper?: ComponentType<LineWrapperProp>;
   WordWrapper?: ComponentType<WordWrapperProp>;
+  LetterWrapper?: ComponentType<LetterWrapperProp>;
 }
 
 const DefaultWrapper = memo(function DefaultWrapper({ children }) {
@@ -34,6 +41,7 @@ export const SplitText: FC<SplitTextProps> = ({
   style,
   LineWrapper = DefaultWrapper,
   WordWrapper = DefaultWrapper,
+  LetterWrapper = DefaultWrapper,
 }) => {
   const text = children as string;
   const elRef = useRef<HTMLDivElement>(null);
@@ -59,22 +67,38 @@ export const SplitText: FC<SplitTextProps> = ({
     setLines(lines);
   }, []);
 
+  let wordCount = 0;
+  let letterCount = 0;
+
   return lines.length ? (
     <div className={className} ref={elRef} style={style}>
       {lines.map((line, i) => {
-        const characters = line.split(' ');
+        const words = line.split(' ');
         return (
           <LineWrapper key={i} lineIndex={i}>
-            {characters.map((char, j) => (
-              <WordWrapper
-                lineIndex={i}
-                wordIndex={j}
-                countIndex={characters.length * i + j}
-                key={j}
-              >
-                {char}{' '}
-              </WordWrapper>
-            ))}
+            {words.map((word, j) => {
+              const letters = (word + ' ').split('');
+              return (
+                <WordWrapper
+                  lineIndex={i}
+                  wordIndex={j}
+                  countIndex={wordCount++}
+                  key={j}
+                >
+                  {letters.map((char, k) => (
+                    <LetterWrapper
+                      lineIndex={i}
+                      wordIndex={j}
+                      letterIndex={k}
+                      countIndex={letterCount++}
+                      key={k}
+                    >
+                      {char}
+                    </LetterWrapper>
+                  ))}
+                </WordWrapper>
+              );
+            })}
           </LineWrapper>
         );
       })}
