@@ -13,4 +13,15 @@ body {
   text-align: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+}
+
+.frame-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 1rem;
+  text-decoration: underline;
+  align-self: flex-start;
+  font-size: 1.5rem;
 }

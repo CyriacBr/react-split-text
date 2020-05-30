@@ -8,7 +8,7 @@ import './styles.css';
 const App = () => {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      <Frame bg="#F56565" color="#F7FAFC">
+      <Frame bg="#F56565" color="#F7FAFC" title="Fade In">
         <FadeIn />
       </Frame>
     </div>
