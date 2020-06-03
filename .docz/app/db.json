@@ -1,0 +1,37 @@
+{
+  "config": {
+    "title": "React Split Text",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-",
+    "files": "docs/source/**/*.{md,markdown,mdx}"
+  },
+  "entries": [
+    {
+      "key": "docs/source/index.mdx",
+      "value": {
+        "id": "4d111b2df0327e5cb0dbcec1130d022e",
+        "filepath": "docs/source/index.mdx",
+        "fullpath": "/mnt/0CC5166B0CC5166B/Work/react-split-text/docs/source/index.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "docs-source-index",
+        "route": "/docs-source-index",
+        "name": "Index",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "react-split-text",
+            "depth": 1,
+            "value": "React Split Text"
+          }
+        ]
+      }
+    }
+  ],
+  "props": []
+}
