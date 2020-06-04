@@ -6,6 +6,7 @@ import { FadeIn } from './components/FadeIn';
 import { Raise } from './components/Raise';
 import './styles.css';
 import { LetterDash } from './components/LetterDash';
+import { Filling } from './components/Filling';
 
 const App = () => {
   return (
@@ -18,6 +19,9 @@ const App = () => {
       </Frame>
       <Frame bg="#48BB78" color="#F7FAFC" title="Letter Dash">
         <LetterDash />
+      </Frame>
+      <Frame bg="#38B2AC" color="#F7FAFC" title="Filling">
+        <Filling bgColor="#38B2AC" />
       </Frame>
     </div>
   );
