@@ -8,27 +8,31 @@ import React, {
   FC,
 } from 'react';
 
-export interface LineWrapperProp {
+export interface LineWrapperProp<T = any> {
   lineIndex: number;
+  extraProps?: T;
 }
-export interface WordWrapperProp {
+export interface WordWrapperProp<T = any> {
   lineIndex: number;
   wordIndex: number;
   countIndex: number;
+  extraProps?: T;
 }
-export interface LetterWrapperProp {
+export interface LetterWrapperProp<T = any> {
   lineIndex: number;
   wordIndex: number;
   letterIndex: number;
   countIndex: number;
+  extraProps?: T;
 }
 
-export interface SplitTextProps {
+export interface SplitTextProps<T = any> {
   className?: string;
   style?: CSSProperties;
   LineWrapper?: ComponentType<LineWrapperProp>;
   WordWrapper?: ComponentType<WordWrapperProp>;
   LetterWrapper?: ComponentType<LetterWrapperProp>;
+  extraProps?: T;
 }
 
 const DefaultWrapper = memo(function DefaultWrapper({ children }) {
@@ -42,6 +46,7 @@ export const SplitText: FC<SplitTextProps> = ({
   LineWrapper = DefaultWrapper,
   WordWrapper = DefaultWrapper,
   LetterWrapper = DefaultWrapper,
+  extraProps,
 }) => {
   const text = children as string;
   const elRef = useRef<HTMLDivElement>(null);
@@ -75,23 +80,25 @@ export const SplitText: FC<SplitTextProps> = ({
       {lines.map((line, i) => {
         const words = line.split(' ');
         return (
-          <LineWrapper key={i} lineIndex={i}>
+          <LineWrapper key={i} lineIndex={i} extraProps={extraProps}>
             {words.map((word, j) => {
               const letters = (word + ' ').split('');
               return (
                 <WordWrapper
+                  key={j}
                   lineIndex={i}
                   wordIndex={j}
                   countIndex={wordCount++}
-                  key={j}
+                  extraProps={extraProps}
                 >
                   {letters.map((char, k) => (
                     <LetterWrapper
+                      key={k}
                       lineIndex={i}
                       wordIndex={j}
                       letterIndex={k}
                       countIndex={letterCount++}
-                      key={k}
+                      extraProps={extraProps}
                     >
                       {char}
                     </LetterWrapper>
@@ -106,7 +113,13 @@ export const SplitText: FC<SplitTextProps> = ({
   ) : (
     <div className={className} ref={elRef} style={style}>
       {text.split(' ').map((word, i) => (
-        <WordWrapper lineIndex={0} wordIndex={i} countIndex={i} key={i}>
+        <WordWrapper
+          key={i}
+          lineIndex={0}
+          wordIndex={i}
+          countIndex={i}
+          extraProps={extraProps}
+        >
           {word}{' '}
         </WordWrapper>
       ))}
