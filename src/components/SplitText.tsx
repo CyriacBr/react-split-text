@@ -7,24 +7,14 @@ import React, {
   CSSProperties,
   FC,
 } from 'react';
-
-export interface LineWrapperProp<T = any> {
-  lineIndex: number;
-  extraProps?: T;
-}
-export interface WordWrapperProp<T = any> {
-  lineIndex: number;
-  wordIndex: number;
-  countIndex: number;
-  extraProps?: T;
-}
-export interface LetterWrapperProp<T = any> {
-  lineIndex: number;
-  wordIndex: number;
-  letterIndex: number;
-  countIndex: number;
-  extraProps?: T;
-}
+import {
+  LineWrapperProp,
+  WordWrapperProp,
+  LetterWrapperProp,
+  LineWrapper,
+  WordWrapper,
+  LetterWrapper,
+} from './Wrappers';
 
 export interface SplitTextProps<T = any> {
   className?: string;
@@ -35,17 +25,17 @@ export interface SplitTextProps<T = any> {
   extraProps?: T;
 }
 
-const DefaultWrapper = memo(function DefaultWrapper({ children }) {
-  return <span>{children}</span>;
-});
+const DefaultLineWrapper = memo(LineWrapper);
+const DefaultWordWrapper = memo(WordWrapper);
+const DefaultLetterWrapper = memo(LetterWrapper);
 
 export const SplitText: FC<SplitTextProps> = ({
   children,
   className,
   style,
-  LineWrapper = DefaultWrapper,
-  WordWrapper = DefaultWrapper,
-  LetterWrapper = DefaultWrapper,
+  LineWrapper = DefaultLineWrapper,
+  WordWrapper = DefaultWordWrapper,
+  LetterWrapper = DefaultLetterWrapper,
   extraProps,
 }) => {
   const text = children as string;
