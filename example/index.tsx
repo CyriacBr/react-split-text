@@ -7,6 +7,7 @@ import { Raise } from './components/Raise';
 import './styles.css';
 import { LetterDash } from './components/LetterDash';
 import { Filling } from './components/Filling';
+import { Reveal } from './components/Reveal';
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
       </Frame>
       <Frame bg="#38B2AC" color="#F7FAFC" title="Filling">
         <Filling bgColor="#38B2AC" />
+      </Frame>
+      <Frame bg="#4299E1" color="#F7FAFC" title="Reveal">
+        <Reveal bgColor="#4299E1" />
       </Frame>
     </div>
   );
