@@ -58,7 +58,7 @@ export const Reveal: React.FC<RevealProps> = ({ bgColor }) => {
       LineWrapper={MemoizedLineWrapper}
       extraProps={bgColor}
     >
-      Hello wolrd from the Reveal Component!
+      Hello world from the Reveal Component!
     </SplitText>
   );
 };

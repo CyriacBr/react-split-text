@@ -62,7 +62,7 @@ export const Filling: React.FC<FillingProps> = ({ bgColor }) => {
       LetterWrapper={MemoizedLetterWrapper}
       WordWrapper={MemoizedWordWrapper}
     >
-      Hello wolrd from the Filling Component!
+      Hello world from the Filling Component!
     </SplitText>
   );
 };

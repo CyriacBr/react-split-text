@@ -32,7 +32,7 @@ export const Raise: React.FC = () => {
       WordWrapper={MemoizedWordWrapper}
       LineWrapper={MemoizedLineWrapper}
     >
-      Hello wolrd from the Raise Component!
+      Hello world from the Raise Component!
     </SplitText>
   );
 };

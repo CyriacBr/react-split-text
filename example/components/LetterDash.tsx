@@ -47,7 +47,7 @@ export const LetterDash: React.FC = () => {
       LetterWrapper={MemoizedLetterWrapper}
       WordWrapper={MemoizedWordWrapper}
     >
-      Hello wolrd from the LetterDash Component!
+      Hello world from the LetterDash Component!
     </SplitText>
   );
 };

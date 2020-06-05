@@ -25,7 +25,7 @@ const MemoizedLetterWrapper = React.memo(LetterWrapper);
 export const FadeIn: React.FC = () => {
   return (
     <SplitText LetterWrapper={MemoizedLetterWrapper}>
-      Hello wolrd from the FadeIn Component!
+      Hello world from the FadeIn Component!
     </SplitText>
   );
 };
