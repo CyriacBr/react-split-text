@@ -3,6 +3,22 @@ import { mount } from 'enzyme';
 import { SplitText } from '../src/index';
 
 describe('SplitText', () => {
+  it('only accept text children', () => {
+    expect(() =>
+      mount(
+        <SplitText>
+          <div>foo</div>
+        </SplitText>
+      )
+    ).toThrow();
+
+    expect(() => mount(<SplitText>foo</SplitText>)).not.toThrow();
+  });
+
+  it('support computed text', () => {
+    expect(() => mount(<SplitText>foo {5}</SplitText>)).not.toThrow();
+  });
+
   it('remake lines when children change', () => {
     const Component: React.FC = () => {
       const [nbr, setNbr] = React.useState(0);

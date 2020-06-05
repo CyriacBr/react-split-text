@@ -15,7 +15,15 @@ export const SplitTextInner: FC<SplitTextProps> = ({
   LetterWrapper = DefaultLetterWrapper,
   extraProps,
 }) => {
-  const text = children as string;
+  let text = '';
+  React.Children.map(children, child => {
+    if (typeof child === 'string' || typeof child === 'number') {
+      text += String(child);
+    } else {
+      throw new Error(`SplitText expect a text as children`);
+    }
+  });
+
   const elRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState<string[]>([]);
 
