@@ -45,7 +45,7 @@ export interface SplitTextProps<T = any> {
   extraProps?: T;
 }
 
-export const SplitText: FC<SplitTextProps> = props => {
+export const SplitText: FC<SplitTextProps> = ({ children, ...props }) => {
   const [key, setKey] = useState(0);
 
   function onResize() {
@@ -59,7 +59,7 @@ export const SplitText: FC<SplitTextProps> = props => {
 
   return (
     <SplitTextInner key={key} {...props}>
-      {props.children}
+      {children}
     </SplitTextInner>
   );
 };

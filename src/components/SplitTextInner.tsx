@@ -19,25 +19,51 @@ export const SplitTextInner: FC<SplitTextProps> = ({
   const elRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState<string[]>([]);
 
-  useLayoutEffect(() => {
+  function makeLines() {
     const el = elRef.current;
     if (!el) return;
+
+    if (lines.length > 0) {
+      return refreshLines(lines, text);
+    }
+
     let lastY;
-    let lines: string[] = [];
+    let newLines: string[] = [];
     let words: string[] = [];
     for (const child of Array.from(el.children)) {
       const y = child.getBoundingClientRect().top;
       if (lastY == null) lastY = y;
       if (y !== lastY) {
-        lines.push(words.join(' '));
+        newLines.push(words.join(' '));
         words = [];
       }
       lastY = y;
       words.push((child.textContent || '').trim());
     }
-    lines.push(words.join(' '));
+    newLines.push(words.join(' '));
+    setLines(newLines);
+  }
+
+  function refreshLines(previous: string[], newText: string) {
+    const maxCharPerLine =
+      previous.map(line => line.length).sort((a, b) => b - a)[0] + 1;
+    const lines: string[] = [];
+    let line: string = '';
+    let charCount = 0;
+    for (const word of newText.split(' ')) {
+      charCount += word.length + 1;
+      if (charCount > maxCharPerLine) {
+        lines.push(line);
+        line = '';
+        charCount = 0;
+      }
+      line += word.trim() + ' ';
+    }
+    lines.push(line);
     setLines(lines);
-  }, []);
+  }
+
+  useLayoutEffect(() => makeLines(), [text]);
 
   let wordCount = 0;
   let letterCount = 0;
@@ -80,15 +106,7 @@ export const SplitTextInner: FC<SplitTextProps> = ({
   ) : (
     <div className={className} ref={elRef} style={style}>
       {text.split(' ').map((word, i) => (
-        <WordWrapper
-          key={i}
-          lineIndex={0}
-          wordIndex={i}
-          countIndex={i}
-          extraProps={extraProps}
-        >
-          {word}{' '}
-        </WordWrapper>
+        <span key={i}>{word} </span>
       ))}
     </div>
   );
