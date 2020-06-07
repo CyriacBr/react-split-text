@@ -12,7 +12,7 @@ export interface LineWrapperProp<T = any> {
 }
 
 export const LineWrapper: React.FC<LineWrapperProp> = ({ children }) => (
-  <span>{children}</span>
+  <span style={{ display: 'inline-block' }}>{children}</span>
 );
 
 export interface WordWrapperProp<T = any> {
@@ -35,7 +35,7 @@ export interface WordWrapperProp<T = any> {
 }
 
 export const WordWrapper: React.FC<WordWrapperProp> = ({ children }) => (
-  <span>{children}</span>
+  <span style={{ whiteSpace: 'pre' }}>{children}</span>
 );
 
 export interface LetterWrapperProp<T = any> {

@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { SplitText } from '../src/index';
+import {
+  SplitText,
+  LineWrapper,
+  WordWrapper,
+  LetterWrapper,
+} from '../src/index';
 
 describe('SplitText', () => {
   it('only accept text children', () => {
@@ -17,6 +22,11 @@ describe('SplitText', () => {
 
   it('support computed text', () => {
     expect(() => mount(<SplitText>foo {5}</SplitText>)).not.toThrow();
+    expect(
+      mount(<SplitText>foo {5}</SplitText>)
+        .text()
+        .match('foo 5')
+    ).toBeTruthy();
   });
 
   it('remake lines when children change', () => {
@@ -24,7 +34,9 @@ describe('SplitText', () => {
       const [nbr, setNbr] = React.useState(0);
       return (
         <div onClick={() => setNbr(v => v + 1)} className="component">
-          <SplitText>{nbr === 0 ? 'render #1' : 'render #2'}</SplitText>
+          <SplitText style={{ width: '1000px' }}>
+            {nbr === 0 ? 'render #1' : 'render #2'}
+          </SplitText>
         </div>
       );
     };
@@ -32,8 +44,8 @@ describe('SplitText', () => {
     const wrapper = mount(<Component />);
     const container = wrapper.find('.component');
 
-    expect(container.text().trim()).toBe('render #1');
+    expect(container.text()).toBe('render #1');
     container.simulate('click');
-    expect(container.text().trim()).toBe('render #2');
+    expect(container.text()).toBe('render #2');
   });
 });

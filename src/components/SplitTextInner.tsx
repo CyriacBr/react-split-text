@@ -26,6 +26,7 @@ export const SplitTextInner: FC<SplitTextProps> = ({
 
   const elRef = useRef<HTMLDivElement>(null);
   const [lines, setLines] = useState<string[]>([]);
+  const maxCharPerLine = useRef<number>(0);
 
   function makeLines() {
     const el = elRef.current;
@@ -53,14 +54,16 @@ export const SplitTextInner: FC<SplitTextProps> = ({
   }
 
   function refreshLines(previous: string[], newText: string) {
-    const maxCharPerLine =
-      previous.map(line => line.length).sort((a, b) => b - a)[0] + 1;
+    const charPerLine =
+      maxCharPerLine.current ||
+      previous.map(line => line.length).sort((a, b) => b - a)[0];
     const lines: string[] = [];
     let line: string = '';
     let charCount = 0;
-    for (const word of newText.split(' ')) {
+    const words = newText.split(' ');
+    for (const [i, word] of words.entries()) {
       charCount += word.length + 1;
-      if (charCount > maxCharPerLine) {
+      if (charCount > charPerLine + 1) {
         lines.push(line);
         line = '';
         charCount = 0;
@@ -68,7 +71,10 @@ export const SplitTextInner: FC<SplitTextProps> = ({
       line += word.trim() + ' ';
     }
     lines.push(line);
-    setLines(lines);
+    setLines(lines.map(line => line.trim()));
+    if (charPerLine > maxCharPerLine.current) {
+      maxCharPerLine.current = charPerLine;
+    }
   }
 
   useLayoutEffect(() => makeLines(), [text]);
@@ -79,11 +85,14 @@ export const SplitTextInner: FC<SplitTextProps> = ({
   return lines.length ? (
     <div className={className} ref={elRef} style={style}>
       {lines.map((line, i) => {
-        const words = line.split(' ');
+        let words = line.split(' ');
+        words = words.map((word, i) =>
+          i === words.length - 1 ? word : word + ' '
+        );
         return (
           <LineWrapper key={i} lineIndex={i} extraProps={extraProps}>
             {words.map((word, j) => {
-              const letters = (word + ' ').split('');
+              const letters = word.split('');
               return (
                 <WordWrapper
                   key={j}
