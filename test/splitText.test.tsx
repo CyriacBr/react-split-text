@@ -48,4 +48,17 @@ describe('SplitText', () => {
     container.simulate('click');
     expect(container.text()).toBe('render #2');
   });
+
+  it('ref is forwarded', () => {
+    const Component: React.FC = () => {
+      const ref = React.useRef<HTMLDivElement>(null);
+      setTimeout(() => {
+        expect(ref.current).not.toBeNull();
+        expect(ref.current).toBeInstanceOf(HTMLElement);
+      }, 500);
+      return <SplitText ref={ref}>Hello World</SplitText>;
+    };
+
+    mount(<Component />);
+  });
 });

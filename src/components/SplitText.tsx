@@ -4,6 +4,7 @@ import React, {
   CSSProperties,
   FC,
   useEffect,
+  forwardRef,
 } from 'react';
 import {
   LineWrapperProp,
@@ -43,9 +44,17 @@ export interface SplitTextProps<T = any> {
    * @type T = any
    */
   extraProps?: T;
+  /**
+   * A React ref to forward to the container.
+   * @type A React ref
+   */
+  ref?: ((instance: unknown) => void) | React.MutableRefObject<unknown> | null;
 }
 
-export const SplitText: FC<SplitTextProps> = ({ children, ...props }) => {
+export const SplitText: FC<SplitTextProps> = forwardRef(function SplitText(
+  { children, ...props },
+  ref
+) {
   const [key, setKey] = useState(0);
 
   function onResize() {
@@ -58,8 +67,8 @@ export const SplitText: FC<SplitTextProps> = ({ children, ...props }) => {
   }, []);
 
   return (
-    <SplitTextInner key={key} {...props}>
+    <SplitTextInner key={key} {...props} ref={ref}>
       {children}
     </SplitTextInner>
   );
-};
+});
