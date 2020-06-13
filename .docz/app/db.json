@@ -32,6 +32,11 @@
             "value": "Features"
           },
           {
+            "slug": "installation",
+            "depth": 2,
+            "value": "Installation"
+          },
+          {
             "slug": "usage",
             "depth": 2,
             "value": "Usage"
@@ -86,14 +91,6 @@
     }
   ],
   "props": [
-    {
-      "key": "example/Examples.tsx",
-      "value": []
-    },
-    {
-      "key": "example/index.tsx",
-      "value": []
-    },
     {
       "key": "src/index.ts",
       "value": [
@@ -290,177 +287,12 @@
       ]
     },
     {
-      "key": "example/components/Banner.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Banner",
-          "methods": [],
-          "props": {}
-        }
-      ]
+      "key": "example/Examples.tsx",
+      "value": []
     },
     {
-      "key": "example/components/FadeIn.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "FadeIn",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "example/components/Filling.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Filling",
-          "methods": [],
-          "props": {
-            "bgColor": {
-              "defaultValue": null,
-              "description": "",
-              "name": "bgColor",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "example/components/Frame.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Frame",
-          "methods": [],
-          "props": {
-            "title": {
-              "defaultValue": null,
-              "description": "",
-              "name": "title",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "bg": {
-              "defaultValue": null,
-              "description": "",
-              "name": "bg",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "color": {
-              "defaultValue": null,
-              "description": "",
-              "name": "color",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "onClick": {
-              "defaultValue": null,
-              "description": "",
-              "name": "onClick",
-              "required": false,
-              "type": {
-                "name": "(() => void) | undefined"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "example/components/LetterDash.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "LetterDash",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "example/components/Raise.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Raise",
-          "methods": [],
-          "props": {}
-        }
-      ]
-    },
-    {
-      "key": "example/components/Reveal.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Reveal",
-          "methods": [],
-          "props": {
-            "bgColor": {
-              "defaultValue": null,
-              "description": "",
-              "name": "bgColor",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "example/components/Shapeshift.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Shapeshift",
-          "methods": [],
-          "props": {
-            "bgColor": {
-              "defaultValue": null,
-              "description": "",
-              "name": "bgColor",
-              "required": true,
-              "type": {
-                "name": "string"
-              }
-            },
-            "textArray": {
-              "defaultValue": null,
-              "description": "",
-              "name": "textArray",
-              "required": true,
-              "type": {
-                "name": "string[]"
-              }
-            },
-            "textIndex": {
-              "defaultValue": null,
-              "description": "",
-              "name": "textIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            }
-          }
-        }
-      ]
+      "key": "example/index.tsx",
+      "value": []
     },
     {
       "key": "src/components/SplitText.tsx",
@@ -926,6 +758,179 @@
               "required": false,
               "type": {
                 "name": "any"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "example/components/Banner.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Banner",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "example/components/FadeIn.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "FadeIn",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "example/components/Filling.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Filling",
+          "methods": [],
+          "props": {
+            "bgColor": {
+              "defaultValue": null,
+              "description": "",
+              "name": "bgColor",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "example/components/Frame.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Frame",
+          "methods": [],
+          "props": {
+            "title": {
+              "defaultValue": null,
+              "description": "",
+              "name": "title",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "bg": {
+              "defaultValue": null,
+              "description": "",
+              "name": "bg",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "color": {
+              "defaultValue": null,
+              "description": "",
+              "name": "color",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "onClick": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onClick",
+              "required": false,
+              "type": {
+                "name": "(() => void) | undefined"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "example/components/LetterDash.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "LetterDash",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "example/components/Raise.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Raise",
+          "methods": [],
+          "props": {}
+        }
+      ]
+    },
+    {
+      "key": "example/components/Reveal.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Reveal",
+          "methods": [],
+          "props": {
+            "bgColor": {
+              "defaultValue": null,
+              "description": "",
+              "name": "bgColor",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "example/components/Shapeshift.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Shapeshift",
+          "methods": [],
+          "props": {
+            "bgColor": {
+              "defaultValue": null,
+              "description": "",
+              "name": "bgColor",
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "textArray": {
+              "defaultValue": null,
+              "description": "",
+              "name": "textArray",
+              "required": true,
+              "type": {
+                "name": "string[]"
+              }
+            },
+            "textIndex": {
+              "defaultValue": null,
+              "description": "",
+              "name": "textIndex",
+              "required": true,
+              "type": {
+                "name": "number"
               }
             }
           }
