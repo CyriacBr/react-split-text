@@ -1,6 +1,7 @@
 # React Split Text
 
 ![CI](https://github.com/CyriacBr/react-split-text/workflows/CI/badge.svg)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@cyriacbr/react-split-text)
 
 This component lets you split your text, and wrap each line, word or letter with a custom element.
 The lines and words are correctly split according to how they fit in the layout.

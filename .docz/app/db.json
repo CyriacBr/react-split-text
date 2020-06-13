@@ -9,7 +9,8 @@
     "themeConfig": {},
     "separator": "-",
     "typescript": true,
-    "files": "docs/source/**/*.{md,markdown,mdx}"
+    "files": "docs/source/**/*.{md,markdown,mdx}",
+    "base": "/react-split-text/"
   },
   "entries": [
     {

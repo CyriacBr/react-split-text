@@ -63,7 +63,7 @@
     "typescript": "^3.9.3"
   },
   "resolutions": {
-    "react-docgen-typescript": "/mnt/0CC5166B0CC5166B/Work/Contribution/react-docgen-typescript",
+    "react-docgen-typescript": "latest",
     "gatsby": "2.23.2"
   },
   "husky": {
