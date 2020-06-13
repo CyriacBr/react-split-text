@@ -16,7 +16,7 @@ if (hasGatsbyConfig) {
 }
 
 const config = {
-  pathPrefix: '/',
+  pathPrefix: '/react-split-text/',
 
   siteMetadata: {
     title: 'React Split Text',
@@ -54,7 +54,7 @@ const config = {
         open: null,
         'open-browser': null,
         root: '/mnt/0CC5166B0CC5166B/Work/react-split-text/.docz',
-        base: '/',
+        base: '/react-split-text/',
         source: './',
         'gatsby-root': null,
         files: 'docs/source/**/*.{md,markdown,mdx}',
