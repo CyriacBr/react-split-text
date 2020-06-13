@@ -1,11 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import {
-  SplitText,
-  LineWrapper,
-  WordWrapper,
-  LetterWrapper,
-} from '../src/index';
+import { SplitText } from '../src/index';
 
 describe('SplitText', () => {
   it('only accept text children', () => {

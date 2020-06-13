@@ -20,10 +20,15 @@ export interface SplitTextProps<T = any> {
    */
   className?: string;
   /**
-   * A style oject to forward to the container.
+   * A style object to forward to the container.
    * @type CSSProperties
    */
   style?: CSSProperties;
+  /**
+   * A React ref to forward to the container.
+   * @type A React ref
+   */
+  ref?: ((instance: unknown) => void) | React.MutableRefObject<unknown> | null;
   /**
    * A custom component to wrap each split line.
    * @type ComponentType<LineWrapperProp>
@@ -44,11 +49,6 @@ export interface SplitTextProps<T = any> {
    * @type T = any
    */
   extraProps?: T;
-  /**
-   * A React ref to forward to the container.
-   * @type A React ref
-   */
-  ref?: ((instance: unknown) => void) | React.MutableRefObject<unknown> | null;
 }
 
 export const SplitText: FC<SplitTextProps> = forwardRef(function SplitText(
