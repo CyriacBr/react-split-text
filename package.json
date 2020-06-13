@@ -22,6 +22,7 @@
     "release:first": "standard-version --first-release",
     "release": "standard-version",
     "release:publish": "git push --follow-tags origin develop && yarn publish --access=public",
+    "release:docs": "yarn docz:build && cp .docz/dist/* docs -r",
     "prepublish": "yarn build && pkg-ok"
   },
   "peerDependencies": {
@@ -40,7 +41,7 @@
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.16.0",
-    "docz": "^2.3.2-alpha.0",
+    "docz": "^2.3.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
@@ -62,7 +63,8 @@
     "typescript": "^3.9.3"
   },
   "resolutions": {
-    "react-docgen-typescript": "/mnt/0CC5166B0CC5166B/Work/Contribution/react-docgen-typescript"
+    "react-docgen-typescript": "/mnt/0CC5166B0CC5166B/Work/Contribution/react-docgen-typescript",
+    "gatsby": "2.23.2"
   },
   "husky": {
     "hooks": {
@@ -96,7 +98,8 @@
       "plugin:jest-formatting/recommended"
     ],
     "ignorePatterns": [
-      "node_modules/"
+      "node_modules/",
+      "docs/"
     ],
     "globals": {
       "Atomics": "readonly",
