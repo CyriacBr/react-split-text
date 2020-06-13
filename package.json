@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -13,12 +13,17 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
+    "test": "tsdx test --passWithNoTests && yarn size",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "docz:serve": "docz build && docz serve"
+    "docz:serve": "docz build && docz serve",
+    "size": "size-limit",
+    "release:first": "standard-version --first-release",
+    "release": "standard-version",
+    "release:publish": "git push --follow-tags origin develop && yarn publish",
+    "prepublish": "yarn build && pkg-ok"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -29,27 +34,42 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
+    "@size-limit/preset-small-lib": "^4.5.0",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^2.16.0",
     "@typescript-eslint/parser": "^2.16.0",
+    "docz": "^2.3.2-alpha.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jest-formatting": "^1.2.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.20.0",
     "husky": "^4.2.5",
     "lint-staged": "^9.5.0",
+    "pkg-ok": "^2.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "size-limit": "^4.5.0",
+    "standard-version": "^8.0.0",
     "tsdx": "^0.13.2",
     "tslib": "^2.0.0",
     "typescript": "^3.9.3"
   },
+  "resolutions": {
+    "react-docgen-typescript": "/mnt/0CC5166B0CC5166B/Work/Contribution/react-docgen-typescript"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "git diff HEAD --quiet && yarn test"
     }
   },
   "commitlint": {
@@ -67,12 +87,14 @@
     "env": {
       "browser": true,
       "es6": true,
-      "node": true
+      "node": true,
+      "jest/globals": true
     },
     "extends": [
       "eslint:recommended",
       "plugin:prettier/recommended",
-      "plugin:react/recommended"
+      "plugin:react/recommended",
+      "plugin:jest-formatting/recommended"
     ],
     "ignorePatterns": [
       "node_modules/"
@@ -90,7 +112,8 @@
       "sourceType": "module"
     },
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "jest"
     ],
     "rules": {
       "no-unused-vars": "off",
@@ -103,7 +126,15 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "dependencies": {
-    "docz": "^2.3.1"
-  }
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>test/setup.ts"
+    ]
+  },
+  "size-limit": [
+    {
+      "limit": "1.5 KB",
+      "path": "dist/react-split-text.cjs.production.min.js"
+    }
+  ]
 }
