@@ -173,7 +173,7 @@
           "props": {
             "lineIndex": {
               "defaultValue": null,
-              "description": "The index of this line wrapper.",
+              "description": "The current index of the line.",
               "name": "lineIndex",
               "required": true,
               "type": {
@@ -198,7 +198,7 @@
           "props": {
             "lineIndex": {
               "defaultValue": null,
-              "description": "The current line index where this word wrapper lives.",
+              "description": "The current line index where the word wrapper lives.",
               "name": "lineIndex",
               "required": true,
               "type": {
@@ -207,7 +207,7 @@
             },
             "wordIndex": {
               "defaultValue": null,
-              "description": "The index of this word wrapper.",
+              "description": "The current index of the word.",
               "name": "wordIndex",
               "required": true,
               "type": {
@@ -241,7 +241,7 @@
           "props": {
             "lineIndex": {
               "defaultValue": null,
-              "description": "The current line index where this letter wrapper lives.",
+              "description": "The current line index where the letter wrapper lives.",
               "name": "lineIndex",
               "required": true,
               "type": {
@@ -250,7 +250,7 @@
             },
             "wordIndex": {
               "defaultValue": null,
-              "description": "The current word index where this letter wrapper lives.",
+              "description": "The current word index where the letter wrapper lives.",
               "name": "wordIndex",
               "required": true,
               "type": {
@@ -259,7 +259,7 @@
             },
             "letterIndex": {
               "defaultValue": null,
-              "description": "The index of this letter wrapper.",
+              "description": "The current index of the letter.",
               "name": "letterIndex",
               "required": true,
               "type": {
@@ -285,6 +285,17 @@
               }
             }
           }
+        }
+      ]
+    },
+    {
+      "key": "example/components/Banner.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Banner",
+          "methods": [],
+          "props": {}
         }
       ]
     },
@@ -601,6 +612,131 @@
       ]
     },
     {
+      "key": "src/components/Wrappers.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "LineWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current index of the line.",
+              "name": "lineIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "WordWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current line index where the word wrapper lives.",
+              "name": "lineIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "wordIndex": {
+              "defaultValue": null,
+              "description": "The current index of the word.",
+              "name": "wordIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "countIndex": {
+              "defaultValue": null,
+              "description": "The current index of the total wrapped words inside <SplitText />.",
+              "name": "countIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "LetterWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current line index where the letter wrapper lives.",
+              "name": "lineIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "wordIndex": {
+              "defaultValue": null,
+              "description": "The current word index where the letter wrapper lives.",
+              "name": "wordIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "letterIndex": {
+              "defaultValue": null,
+              "description": "The current index of the letter.",
+              "name": "letterIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "countIndex": {
+              "defaultValue": null,
+              "description": "The current index of the total wrapped letters inside <SplitText />.",
+              "name": "countIndex",
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/components/index.ts",
       "value": [
         {
@@ -673,131 +809,6 @@
             }
           }
         },
-        {
-          "description": "",
-          "displayName": "LineWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The index of this line wrapper.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "WordWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current line index where this word wrapper lives.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "wordIndex": {
-              "defaultValue": null,
-              "description": "The index of this word wrapper.",
-              "name": "wordIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "countIndex": {
-              "defaultValue": null,
-              "description": "The current index of the total wrapped words inside <SplitText />.",
-              "name": "countIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "LetterWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current line index where this letter wrapper lives.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "wordIndex": {
-              "defaultValue": null,
-              "description": "The current word index where this letter wrapper lives.",
-              "name": "wordIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "letterIndex": {
-              "defaultValue": null,
-              "description": "The index of this letter wrapper.",
-              "name": "letterIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "countIndex": {
-              "defaultValue": null,
-              "description": "The current index of the total wrapped letters inside <SplitText />.",
-              "name": "countIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/components/Wrappers.tsx",
-      "value": [
         {
           "description": "",
           "displayName": "LineWrapper",
