@@ -16,11 +16,7 @@ body {
   cursor: pointer;
   position: relative;
   text-transform: uppercase;
-  /* font-family: Gotham, Helvetica, Arial, sans-serif; */
-  /* text-align: center; */
   letter-spacing: 0.2em;
-  /* font-size: 40px; */
-  /* line-height: 48px; */
 }
 
 .frame-title {
@@ -31,4 +27,8 @@ body {
   text-decoration: underline;
   align-self: flex-start;
   font-size: 1.5rem;
+}
+
+.frame > * {
+  padding: 1rem;
 }
