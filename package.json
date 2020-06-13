@@ -15,20 +15,19 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests && yarn size",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve",
     "size": "size-limit",
     "release:first": "standard-version --first-release",
     "release": "standard-version",
-    "release:publish": "git push --follow-tags origin develop && yarn publish",
+    "release:publish": "git push --follow-tags origin develop && yarn publish --access=public",
     "prepublish": "yarn build && pkg-ok"
   },
   "peerDependencies": {
     "react": ">=16"
   },
-  "name": "react-split-text",
+  "name": "@cyriacbr/react-split-text",
   "author": "CyriacBr",
   "module": "dist/react-split-text.esm.js",
   "devDependencies": {
