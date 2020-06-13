@@ -5,6 +5,7 @@ import React, {
   FC,
   useEffect,
   forwardRef,
+  useCallback,
 } from 'react';
 import {
   LineWrapperProp,
@@ -12,6 +13,7 @@ import {
   LetterWrapperProp,
 } from './Wrappers';
 import { SplitTextInner } from './SplitTextInner';
+import { debounce } from '../utils';
 
 export interface SplitTextProps<T = any> {
   /**
@@ -57,9 +59,7 @@ export const SplitText: FC<SplitTextProps> = forwardRef(function SplitText(
 ) {
   const [key, setKey] = useState(0);
 
-  function onResize() {
-    setKey(v => v + 1);
-  }
+  const onResize = debounce(() => setKey(v => v + 1), 300);
 
   useEffect(() => {
     window.addEventListener('resize', onResize);
