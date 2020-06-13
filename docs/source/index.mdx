@@ -1,3 +1,111 @@
-# React Split Text
+import './styles.css';
+
+import { Banner } from '../../example/components/Banner.tsx'
+
+<Banner />
 
 This component lets you split your text, and wrap each line, word or letter with a custom element.
+The lines and words are correctly split according to how they fit in the layout.
+The component doesn't change that behavior, it justs analyze the text and wrap each line, word and letter in a custom element.
+This lib is useful when trying to make text animations or special effects with texts.
+
+## Features
+
+* Zero-dependency 1.3 KB minified and gzipped
+* Wrap your letters, words or lines with custom elements
+* Respect and keep your layout integrity
+* Readjust on resize
+* Support dynamic text
+
+## Usage
+
+import { Playground, Props } from 'docz';
+import { SplitText, LineWrapper, WordWrapper, LetterWrapper } from '../../src/index.ts';
+
+To use this library, simply wrap your text with the `SplitText` component.
+The text will automatically be wrapped, by default with `span` elements, and will be readjusted on resize.
+You can inspect the bellow result to see how each line, word and letter are wrapped with a `span`.
+
+<Playground>
+  <SplitText>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+  </SplitText>
+</Playground>
+
+#### Props
+
+<Props of={SplitText} />
+
+## Wrapping Lines
+
+To wrap lines, pass a component to the `LineWrapper` prop. SplitText will forward the following props to the wrapper:
+
+<Props of={LineWrapper} />
+
+#### Example
+
+Hover the lines to see their indexes.
+
+<Playground>
+  <SplitText LineWrapper={({ lineIndex, children }) => <span className="wrapper">{children}<b className="index">({lineIndex})</b></span> }>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+  </SplitText>
+</Playground>
+
+## Wrapping Words
+
+Similarly, to wrap words, pass a component to the `WordWrapper` prop. SplitText will forward the following props to the wrapper:
+
+<Props of={WordWrapper} />
+
+#### Example
+
+Hover the words to see their indexes.
+
+<Playground>
+  <SplitText WordWrapper={({ wordIndex, countIndex, children }) => <span className="wrapper">{children}<b className="index small">({wordIndex})({countIndex})</b></span> }>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+  </SplitText>
+</Playground>
+
+## Wrapping Letters
+
+The same applies when it comes to wrapping letters. Use the `LetterWrapper` prop.
+SplitText will forward the following props to the wrapper:
+
+<Props of={LetterWrapper} />
+
+#### Example
+
+Hover the letters to see their indexes.
+
+<Playground>
+  <SplitText LetterWrapper={({ letterIndex, children }) => <span className="wrapper">{children}<b className="index small">({letterIndex})</b></span> }>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+  </SplitText>
+</Playground>
+
+## Misusage
+
+The point of this component is primarily for animation purposes. This is not to be used to actually alter the content of your text. 
+**If your wrappers change the layout** of your content, you may have undesired effects.
+This is an example of a result you probably do not want: adding extra content using the wrappers will result in incorrect splitting.
+
+<Playground>
+  <SplitText LineWrapper={({ lineIndex, children }) => <span className="wrapper">{children}<b>(line {lineIndex})</b></span> }>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+  </SplitText>
+</Playground>
+
+This also applies to wrappers injecting CSS that change the layout (e.g increases font size).
+
+## Real-World Usage
+
+Bellow are some text animations and effects realized with this library and `framer-motion`.
+You can click on each frame to re-render the animation.
+
+import { Examples } from '../../example/Examples.tsx';
+
+<Playground>
+  <Examples />
+</Playground>

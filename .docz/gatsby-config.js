@@ -24,6 +24,13 @@ const config = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+    {
       resolve: 'gatsby-theme-docz',
       options: {
         themeConfig: {},
@@ -36,7 +43,7 @@ const config = {
         mdPlugins: [],
         hastPlugins: [],
         ignore: [],
-        typescript: false,
+        typescript: true,
         ts: false,
         propsParser: true,
         'props-parser': true,

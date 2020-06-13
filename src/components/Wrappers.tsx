@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface LineWrapperProp<T = any> {
   /**
-   * The index of this line wrapper.
+   * The current index of the line.
    */
   lineIndex: number;
   /**
@@ -17,11 +17,11 @@ export const LineWrapper: React.FC<LineWrapperProp> = ({ children }) => (
 
 export interface WordWrapperProp<T = any> {
   /**
-   * The current line index where this word wrapper lives.
+   * The current line index where the word wrapper lives.
    */
   lineIndex: number;
   /**
-   * The index of this word wrapper.
+   * The current index of the word.
    */
   wordIndex: number;
   /**
@@ -40,15 +40,15 @@ export const WordWrapper: React.FC<WordWrapperProp> = ({ children }) => (
 
 export interface LetterWrapperProp<T = any> {
   /**
-   * The current line index where this letter wrapper lives.
+   * The current line index where the letter wrapper lives.
    */
   lineIndex: number;
   /**
-   * The current word index where this letter wrapper lives.
+   * The current word index where the letter wrapper lives.
    */
   wordIndex: number;
   /**
-   * The index of this letter wrapper.
+   * The current index of the letter.
    */
   letterIndex: number;
   /**

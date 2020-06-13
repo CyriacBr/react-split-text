@@ -1,0 +1,26 @@
+.wrapper {
+  position: relative;
+}
+
+.index {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
+}
+
+.wrapper:hover {
+  /* opacity: 0.5; */
+}
+
+.wrapper:hover .index {
+  opacity: 1;
+  background-color: white;
+}
+
+.small {
+  font-size: .8rem;
+}
