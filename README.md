@@ -7,12 +7,12 @@
 
 This component lets you split your text, and wrap each line, word or letter with a custom element.
 The lines and words are correctly split according to how they fit in the layout.
-The component doesn't change that behavior, it justs analyze the text and wrap each line, word and letter in a custom element.
+The component doesn't change that behavior, it just analyses the text and wrap each line, word and letter in a custom element.
 This lib is useful when trying to make text animations or special effects with texts.
 
 ## Features
 
-* Zero-dependency 1.3 KB minified and gzipped
+* Zero-dependency 1.44 KB minified and gzipped
 * Wrap your letters, words or lines with custom elements
 * Respect and keep your layout integrity
 * Readjust on resize
