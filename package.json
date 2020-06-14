@@ -23,7 +23,8 @@
     "release": "standard-version",
     "release:publish": "git push --follow-tags origin develop && yarn publish --access=public",
     "release:docs": "yarn docz:build && cp .docz/dist/* docs -r",
-    "prepublish": "yarn build && pkg-ok"
+    "prepublish": "yarn build && pkg-ok",
+    "test:ci": "tsdx test --passWithNoTests --ci --coverage --maxWorkers=2 && yarn size"
   },
   "peerDependencies": {
     "react": ">=16"
