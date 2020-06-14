@@ -4,25 +4,25 @@
     "description": "My awesome app using docz",
     "menu": [],
     "version": "1.0.0",
-    "repository": null,
+    "repository": "https://github.com/CyriacBr/react-split-text",
     "native": false,
     "themeConfig": {},
     "separator": "-",
     "typescript": true,
-    "files": "docs/source/**/*.{md,markdown,mdx}",
+    "files": "docs/**/*.{md,markdown,mdx}",
     "base": "/react-split-text/"
   },
   "entries": [
     {
-      "key": "docs/source/index.mdx",
+      "key": "docs/index.mdx",
       "value": {
-        "id": "4d111b2df0327e5cb0dbcec1130d022e",
-        "filepath": "docs/source/index.mdx",
-        "fullpath": "/mnt/0CC5166B0CC5166B/Work/react-split-text/docs/source/index.mdx",
-        "link": "",
+        "id": "73498ad0e1e62a714b08085d318f9de1",
+        "filepath": "docs/index.mdx",
+        "fullpath": "/mnt/0CC5166B0CC5166B/Work/react-split-text/docs/index.mdx",
+        "link": "https://github.com/CyriacBr/react-split-text/edit/master/docs/index.mdx",
         "hidden": false,
-        "slug": "docs-source-index",
-        "route": "/docs-source-index",
+        "slug": "docs-index",
+        "route": "/docs-index",
         "name": "Index",
         "menu": "",
         "headings": [
@@ -92,6 +92,14 @@
   ],
   "props": [
     {
+      "key": "example/Examples.tsx",
+      "value": []
+    },
+    {
+      "key": "example/index.tsx",
+      "value": []
+    },
+    {
       "key": "src/index.ts",
       "value": [
         {
@@ -103,6 +111,10 @@
               "defaultValue": null,
               "description": "className to forward to the container.",
               "name": "className",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
               "required": false,
               "type": {
                 "name": "string"
@@ -112,6 +124,10 @@
               "defaultValue": null,
               "description": "A style object to forward to the container.",
               "name": "style",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
               "required": false,
               "type": {
                 "name": "CSSProperties"
@@ -121,6 +137,10 @@
               "defaultValue": null,
               "description": "A React ref to forward to the container.",
               "name": "ref",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
               "required": false,
               "type": {
                 "name": "A React ref"
@@ -130,6 +150,10 @@
               "defaultValue": null,
               "description": "A custom component to wrap each split line.",
               "name": "LineWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
               "required": false,
               "type": {
                 "name": "ComponentType<LineWrapperProp>"
@@ -139,6 +163,10 @@
               "defaultValue": null,
               "description": "A custom component to wrap each split word.",
               "name": "WordWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
               "required": false,
               "type": {
                 "name": "ComponentType<WordWrapperProp>"
@@ -148,6 +176,10 @@
               "defaultValue": null,
               "description": "A custom component to wrap each split letter.",
               "name": "LetterWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
               "required": false,
               "type": {
                 "name": "ComponentType<LetterWrapperProp>"
@@ -157,6 +189,10 @@
               "defaultValue": null,
               "description": "An extra value that will be forwarded to each wrappers.",
               "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
               "required": false,
               "type": {
                 "name": "T = any"
@@ -173,6 +209,10 @@
               "defaultValue": null,
               "description": "The current index of the line.",
               "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LineWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -182,6 +222,10 @@
               "defaultValue": null,
               "description": "Extra props forwarded from SplitText.",
               "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LineWrapperProp"
+              },
               "required": false,
               "type": {
                 "name": "any"
@@ -198,6 +242,10 @@
               "defaultValue": null,
               "description": "The current line index where the word wrapper lives.",
               "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -207,6 +255,10 @@
               "defaultValue": null,
               "description": "The current index of the word.",
               "name": "wordIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -216,6 +268,10 @@
               "defaultValue": null,
               "description": "The current index of the total wrapped words inside <SplitText />.",
               "name": "countIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -225,6 +281,10 @@
               "defaultValue": null,
               "description": "Extra props forwarded from SplitText.",
               "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
               "required": false,
               "type": {
                 "name": "any"
@@ -241,6 +301,10 @@
               "defaultValue": null,
               "description": "The current line index where the letter wrapper lives.",
               "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -250,6 +314,10 @@
               "defaultValue": null,
               "description": "The current word index where the letter wrapper lives.",
               "name": "wordIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -259,6 +327,10 @@
               "defaultValue": null,
               "description": "The current index of the letter.",
               "name": "letterIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -268,6 +340,10 @@
               "defaultValue": null,
               "description": "The current index of the total wrapped letters inside <SplitText />.",
               "name": "countIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
               "required": true,
               "type": {
                 "name": "number"
@@ -277,484 +353,10 @@
               "defaultValue": null,
               "description": "Extra props forwarded from SplitText.",
               "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "example/Examples.tsx",
-      "value": []
-    },
-    {
-      "key": "example/index.tsx",
-      "value": []
-    },
-    {
-      "key": "src/components/SplitText.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SplitText",
-          "methods": [],
-          "props": {
-            "className": {
-              "defaultValue": null,
-              "description": "className to forward to the container.",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "style": {
-              "defaultValue": null,
-              "description": "A style object to forward to the container.",
-              "name": "style",
-              "required": false,
-              "type": {
-                "name": "CSSProperties"
-              }
-            },
-            "ref": {
-              "defaultValue": null,
-              "description": "A React ref to forward to the container.",
-              "name": "ref",
-              "required": false,
-              "type": {
-                "name": "A React ref"
-              }
-            },
-            "LineWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split line.",
-              "name": "LineWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<LineWrapperProp>"
-              }
-            },
-            "WordWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split word.",
-              "name": "WordWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<WordWrapperProp>"
-              }
-            },
-            "LetterWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split letter.",
-              "name": "LetterWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<LetterWrapperProp>"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "An extra value that will be forwarded to each wrappers.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "T = any"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/components/SplitTextInner.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SplitTextInner",
-          "methods": [],
-          "props": {
-            "className": {
-              "defaultValue": null,
-              "description": "className to forward to the container.",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "style": {
-              "defaultValue": null,
-              "description": "A style object to forward to the container.",
-              "name": "style",
-              "required": false,
-              "type": {
-                "name": "CSSProperties"
-              }
-            },
-            "ref": {
-              "defaultValue": null,
-              "description": "A React ref to forward to the container.",
-              "name": "ref",
-              "required": false,
-              "type": {
-                "name": "A React ref"
-              }
-            },
-            "LineWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split line.",
-              "name": "LineWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<LineWrapperProp>"
-              }
-            },
-            "WordWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split word.",
-              "name": "WordWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<WordWrapperProp>"
-              }
-            },
-            "LetterWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split letter.",
-              "name": "LetterWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<LetterWrapperProp>"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "An extra value that will be forwarded to each wrappers.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "T = any"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/components/Wrappers.tsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "LineWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current index of the line.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "WordWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current line index where the word wrapper lives.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "wordIndex": {
-              "defaultValue": null,
-              "description": "The current index of the word.",
-              "name": "wordIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "countIndex": {
-              "defaultValue": null,
-              "description": "The current index of the total wrapped words inside <SplitText />.",
-              "name": "countIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "LetterWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current line index where the letter wrapper lives.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "wordIndex": {
-              "defaultValue": null,
-              "description": "The current word index where the letter wrapper lives.",
-              "name": "wordIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "letterIndex": {
-              "defaultValue": null,
-              "description": "The current index of the letter.",
-              "name": "letterIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "countIndex": {
-              "defaultValue": null,
-              "description": "The current index of the total wrapped letters inside <SplitText />.",
-              "name": "countIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/components/index.ts",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SplitText",
-          "methods": [],
-          "props": {
-            "className": {
-              "defaultValue": null,
-              "description": "className to forward to the container.",
-              "name": "className",
-              "required": false,
-              "type": {
-                "name": "string"
-              }
-            },
-            "style": {
-              "defaultValue": null,
-              "description": "A style object to forward to the container.",
-              "name": "style",
-              "required": false,
-              "type": {
-                "name": "CSSProperties"
-              }
-            },
-            "ref": {
-              "defaultValue": null,
-              "description": "A React ref to forward to the container.",
-              "name": "ref",
-              "required": false,
-              "type": {
-                "name": "A React ref"
-              }
-            },
-            "LineWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split line.",
-              "name": "LineWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<LineWrapperProp>"
-              }
-            },
-            "WordWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split word.",
-              "name": "WordWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<WordWrapperProp>"
-              }
-            },
-            "LetterWrapper": {
-              "defaultValue": null,
-              "description": "A custom component to wrap each split letter.",
-              "name": "LetterWrapper",
-              "required": false,
-              "type": {
-                "name": "ComponentType<LetterWrapperProp>"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "An extra value that will be forwarded to each wrappers.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "T = any"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "LineWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current index of the line.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "WordWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current line index where the word wrapper lives.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "wordIndex": {
-              "defaultValue": null,
-              "description": "The current index of the word.",
-              "name": "wordIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "countIndex": {
-              "defaultValue": null,
-              "description": "The current index of the total wrapped words inside <SplitText />.",
-              "name": "countIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
-              "required": false,
-              "type": {
-                "name": "any"
-              }
-            }
-          }
-        },
-        {
-          "description": "",
-          "displayName": "LetterWrapper",
-          "methods": [],
-          "props": {
-            "lineIndex": {
-              "defaultValue": null,
-              "description": "The current line index where the letter wrapper lives.",
-              "name": "lineIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "wordIndex": {
-              "defaultValue": null,
-              "description": "The current word index where the letter wrapper lives.",
-              "name": "wordIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "letterIndex": {
-              "defaultValue": null,
-              "description": "The current index of the letter.",
-              "name": "letterIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "countIndex": {
-              "defaultValue": null,
-              "description": "The current index of the total wrapped letters inside <SplitText />.",
-              "name": "countIndex",
-              "required": true,
-              "type": {
-                "name": "number"
-              }
-            },
-            "extraProps": {
-              "defaultValue": null,
-              "description": "Extra props forwarded from SplitText.",
-              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
               "required": false,
               "type": {
                 "name": "any"
@@ -798,6 +400,10 @@
               "defaultValue": null,
               "description": "",
               "name": "bgColor",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Filling.tsx",
+                "name": "FillingProps"
+              },
               "required": true,
               "type": {
                 "name": "string"
@@ -819,6 +425,10 @@
               "defaultValue": null,
               "description": "",
               "name": "title",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Frame.tsx",
+                "name": "FrameProps"
+              },
               "required": true,
               "type": {
                 "name": "string"
@@ -828,6 +438,10 @@
               "defaultValue": null,
               "description": "",
               "name": "bg",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Frame.tsx",
+                "name": "FrameProps"
+              },
               "required": true,
               "type": {
                 "name": "string"
@@ -837,6 +451,10 @@
               "defaultValue": null,
               "description": "",
               "name": "color",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Frame.tsx",
+                "name": "FrameProps"
+              },
               "required": true,
               "type": {
                 "name": "string"
@@ -846,6 +464,10 @@
               "defaultValue": null,
               "description": "",
               "name": "onClick",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Frame.tsx",
+                "name": "FrameProps"
+              },
               "required": false,
               "type": {
                 "name": "(() => void) | undefined"
@@ -889,6 +511,10 @@
               "defaultValue": null,
               "description": "",
               "name": "bgColor",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Reveal.tsx",
+                "name": "RevealProps"
+              },
               "required": true,
               "type": {
                 "name": "string"
@@ -910,6 +536,10 @@
               "defaultValue": null,
               "description": "",
               "name": "bgColor",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Shapeshift.tsx",
+                "name": "ShapeshiftProps"
+              },
               "required": true,
               "type": {
                 "name": "string"
@@ -919,6 +549,10 @@
               "defaultValue": null,
               "description": "",
               "name": "textArray",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Shapeshift.tsx",
+                "name": "ShapeshiftProps"
+              },
               "required": true,
               "type": {
                 "name": "string[]"
@@ -928,9 +562,655 @@
               "defaultValue": null,
               "description": "",
               "name": "textIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/example/components/Shapeshift.tsx",
+                "name": "ShapeshiftProps"
+              },
               "required": true,
               "type": {
                 "name": "number"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/SplitText.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SplitText",
+          "methods": [],
+          "props": {
+            "className": {
+              "defaultValue": null,
+              "description": "className to forward to the container.",
+              "name": "className",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "style": {
+              "defaultValue": null,
+              "description": "A style object to forward to the container.",
+              "name": "style",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "CSSProperties"
+              }
+            },
+            "ref": {
+              "defaultValue": null,
+              "description": "A React ref to forward to the container.",
+              "name": "ref",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "A React ref"
+              }
+            },
+            "LineWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split line.",
+              "name": "LineWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<LineWrapperProp>"
+              }
+            },
+            "WordWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split word.",
+              "name": "WordWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<WordWrapperProp>"
+              }
+            },
+            "LetterWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split letter.",
+              "name": "LetterWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<LetterWrapperProp>"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "An extra value that will be forwarded to each wrappers.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "T = any"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/SplitTextInner.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SplitTextInner",
+          "methods": [],
+          "props": {
+            "className": {
+              "defaultValue": null,
+              "description": "className to forward to the container.",
+              "name": "className",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "style": {
+              "defaultValue": null,
+              "description": "A style object to forward to the container.",
+              "name": "style",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "CSSProperties"
+              }
+            },
+            "ref": {
+              "defaultValue": null,
+              "description": "A React ref to forward to the container.",
+              "name": "ref",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "A React ref"
+              }
+            },
+            "LineWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split line.",
+              "name": "LineWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<LineWrapperProp>"
+              }
+            },
+            "WordWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split word.",
+              "name": "WordWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<WordWrapperProp>"
+              }
+            },
+            "LetterWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split letter.",
+              "name": "LetterWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<LetterWrapperProp>"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "An extra value that will be forwarded to each wrappers.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "T = any"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/Wrappers.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "LineWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current index of the line.",
+              "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LineWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LineWrapperProp"
+              },
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "WordWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current line index where the word wrapper lives.",
+              "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "wordIndex": {
+              "defaultValue": null,
+              "description": "The current index of the word.",
+              "name": "wordIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "countIndex": {
+              "defaultValue": null,
+              "description": "The current index of the total wrapped words inside <SplitText />.",
+              "name": "countIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "LetterWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current line index where the letter wrapper lives.",
+              "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "wordIndex": {
+              "defaultValue": null,
+              "description": "The current word index where the letter wrapper lives.",
+              "name": "wordIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "letterIndex": {
+              "defaultValue": null,
+              "description": "The current index of the letter.",
+              "name": "letterIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "countIndex": {
+              "defaultValue": null,
+              "description": "The current index of the total wrapped letters inside <SplitText />.",
+              "name": "countIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/components/index.ts",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SplitText",
+          "methods": [],
+          "props": {
+            "className": {
+              "defaultValue": null,
+              "description": "className to forward to the container.",
+              "name": "className",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "string"
+              }
+            },
+            "style": {
+              "defaultValue": null,
+              "description": "A style object to forward to the container.",
+              "name": "style",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "CSSProperties"
+              }
+            },
+            "ref": {
+              "defaultValue": null,
+              "description": "A React ref to forward to the container.",
+              "name": "ref",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "A React ref"
+              }
+            },
+            "LineWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split line.",
+              "name": "LineWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<LineWrapperProp>"
+              }
+            },
+            "WordWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split word.",
+              "name": "WordWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<WordWrapperProp>"
+              }
+            },
+            "LetterWrapper": {
+              "defaultValue": null,
+              "description": "A custom component to wrap each split letter.",
+              "name": "LetterWrapper",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "ComponentType<LetterWrapperProp>"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "An extra value that will be forwarded to each wrappers.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/SplitText.tsx",
+                "name": "SplitTextProps"
+              },
+              "required": false,
+              "type": {
+                "name": "T = any"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "LineWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current index of the line.",
+              "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LineWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LineWrapperProp"
+              },
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "WordWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current line index where the word wrapper lives.",
+              "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "wordIndex": {
+              "defaultValue": null,
+              "description": "The current index of the word.",
+              "name": "wordIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "countIndex": {
+              "defaultValue": null,
+              "description": "The current index of the total wrapped words inside <SplitText />.",
+              "name": "countIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "WordWrapperProp"
+              },
+              "required": false,
+              "type": {
+                "name": "any"
+              }
+            }
+          }
+        },
+        {
+          "description": "",
+          "displayName": "LetterWrapper",
+          "methods": [],
+          "props": {
+            "lineIndex": {
+              "defaultValue": null,
+              "description": "The current line index where the letter wrapper lives.",
+              "name": "lineIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "wordIndex": {
+              "defaultValue": null,
+              "description": "The current word index where the letter wrapper lives.",
+              "name": "wordIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "letterIndex": {
+              "defaultValue": null,
+              "description": "The current index of the letter.",
+              "name": "letterIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "countIndex": {
+              "defaultValue": null,
+              "description": "The current index of the total wrapped letters inside <SplitText />.",
+              "name": "countIndex",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": true,
+              "type": {
+                "name": "number"
+              }
+            },
+            "extraProps": {
+              "defaultValue": null,
+              "description": "Extra props forwarded from SplitText.",
+              "name": "extraProps",
+              "parent": {
+                "fileName": "/mnt/0CC5166B0CC5166B/Work/react-split-text/src/components/Wrappers.tsx",
+                "name": "LetterWrapperProp"
+              },
+              "required": false,
+              "type": {
+                "name": "any"
               }
             }
           }

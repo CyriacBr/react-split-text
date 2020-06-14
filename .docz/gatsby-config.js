@@ -57,7 +57,7 @@ const config = {
         base: '/react-split-text/',
         source: './',
         'gatsby-root': null,
-        files: 'docs/source/**/*.{md,markdown,mdx}',
+        files: 'docs/**/*.{md,markdown,mdx}',
         public: '/public',
         dest: '.docz/dist',
         d: '.docz/dist',
