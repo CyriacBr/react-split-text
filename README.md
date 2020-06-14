@@ -30,7 +30,6 @@ yarn add @cyriacbr/react-split-text
 
 To use this library, simply wrap your text with the `SplitText` component.
 The text will automatically be wrapped, by default with `span` elements, and will be readjusted on resize.
-You can inspect the bellow result to see how each line, word and letter are wrapped with a `span`.
 
 ```jsx
 <SplitText>
