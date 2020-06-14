@@ -32,6 +32,16 @@
   "name": "@cyriacbr/react-split-text",
   "author": "CyriacBr",
   "module": "dist/react-split-text.esm.js",
+  "keywords": [
+    "react",
+    "typescript",
+    "split",
+    "text",
+    "wrap",
+    "animation",
+    "framer",
+    "motion"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
@@ -53,7 +63,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.20.0",
     "husky": "^4.2.5",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.2.10",
     "pkg-ok": "^2.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -81,8 +91,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "eslintConfig": {
