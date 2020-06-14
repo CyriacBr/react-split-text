@@ -42,6 +42,10 @@
     "framer",
     "motion"
   ],
+  "homepage": "https://github.com/CyriacBr/react-split-text",
+  "repository": {
+    "url": "https://github.com/CyriacBr/react-split-text.git"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
