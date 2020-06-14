@@ -1,6 +1,6 @@
 import './styles.css';
 
-import { Banner } from '../../example/components/Banner.tsx'
+import { Banner } from '../example/components/Banner.tsx'
 
 <Banner />
 
@@ -28,7 +28,7 @@ yarn add @cyriacbr/react-split-text
 ## Usage
 
 import { Playground, Props } from 'docz';
-import { SplitText, LineWrapper, WordWrapper, LetterWrapper } from '../../src/index.ts';
+import { SplitText, LineWrapper, WordWrapper, LetterWrapper } from '../src/index.ts';
 
 To use this library, simply wrap your text with the `SplitText` component.
 The text will automatically be wrapped, by default with `span` elements, and will be readjusted on resize.
@@ -112,7 +112,7 @@ This also applies to wrappers injecting CSS that change the layout (e.g increase
 Bellow are some text animations and effects realized with this library and `framer-motion`.
 You can click on each frame to re-render the animation.
 
-import { Examples } from '../../example/Examples.tsx';
+import { Examples } from '../example/Examples.tsx';
 
 <Playground>
   <Examples />
